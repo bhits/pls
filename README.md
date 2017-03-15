@@ -1,6 +1,6 @@
-# Provider Lookup Service API
+# Provider Lookup Service
 
-The Provider Lookup Service (PLS) API is responsible for storing provider information as a provider directory. The PLS also provides a RESTful API for querying providers by using several query parameters including *first name, last name, gender, address, and phone number* for individual providers, and *organization name, address, and phone number* for organizational providers.
+The Provider Lookup Service (PLS) is responsible for storing provider information as a provider directory. The PLS also provides a RESTful service for querying providers by using several query parameters including *first name, last name, gender, address, and phone number* for individual providers, and *organization name, address, and phone number* for organizational providers.
 
 
 ## Build
@@ -27,24 +27,24 @@ To build the project, navigate to the folder that contains the [**parent** `pom.
 
 ### Prerequisites
 
-This API uses *[MySQL](https://www.mysql.com/)* for persistence and *[Flyway](https://flywaydb.org/)* for database migration. It requires having a database user account with Object and DDL Rights to a schema with the default name `pls`. Please see [Configure](#configure) section for details of configuring the data source. 
+This project uses *[MySQL](https://www.mysql.com/)* for persistence and *[Flyway](https://flywaydb.org/)* for database migration. It requires having a database user account with Object and DDL Rights to a schema with the default name `pls`. Please see [Configure](#configure) section for details of configuring the data source. 
 
-A [SQL file](https://github.com/bhits/pls-api/blob/master/pls-db-sample/pls_db_sample.sql) is provided with this project to populate it with a small set of sample provider data.
+A [SQL file](https://github.com/bhits/pls/blob/master/pls-db-sample/pls_db_sample.sql) is provided with this project to populate it with a small set of sample provider data.
 
 ### Commands
 
-This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and serves the API via an embedded Tomcat instance. Therefore, there is no need for a separate application server to run this service.
+This is a [Spring Boot](https://projects.spring.io/spring-boot/) project and serves the project via an embedded Tomcat instance. Therefore, there is no need for a separate application server to run this service.
 + Run as a JAR file: `java -jar pls-x.x.x-SNAPSHOT.jar <additional program arguments>`
 + Run as a Docker Container: `docker run -d bhits/pls:latest <additional program arguments>`
 
-*NOTE: In order for this API to fully function as a microservice in C2S Application, it is also required to setup the dependency microservices and support level infrastructure. Please refer to the [C2S Deployment Guide](https://github.com/bhits/consent2share/releases/download/2.1.0/c2s-deployment-guide.pdf) for instructions to setup the C2S infrastructure.*
+*NOTE: In order for this project to fully function as a microservice in C2S Application, it is also required to setup the dependency microservices and support level infrastructure. Please refer to the [C2S Deployment Guide](https://github.com/bhits/consent2share/releases/download/2.1.0/c2s-deployment-guide.pdf) for instructions to setup the C2S infrastructure.*
 
 
 ## Configure
 
-This API utilizes [`Configuration Server`](https://github.com/bhits/config-server) which is based on [Spring Cloud Config](https://github.com/spring-cloud/spring-cloud-config) to manage externalized configuration, which is stored in a `Configuration Data Git Repository`. We provide a [`Default Configuration Data Git Repository`]( https://github.com/bhits/c2s-config-data).
+This project utilizes [`Configuration Server`](https://github.com/bhits/config-server) which is based on [Spring Cloud Config](https://github.com/spring-cloud/spring-cloud-config) to manage externalized configuration, which is stored in a `Configuration Data Git Repository`. We provide a [`Default Configuration Data Git Repository`]( https://github.com/bhits/c2s-config-data).
 
-This API can run with the default configuration, which is targeted for a local development environment. Default configuration data is from three places: `bootstrap.yml`, `application.yml`, and the data which `Configuration Server` reads from `Configuration Data Git Repository`. Both `bootstrap.yml` and `application.yml` files are located in the `resources` folder of this source code.
+This project can run with the default configuration, which is targeted for a local development environment. Default configuration data is from three places: `bootstrap.yml`, `application.yml`, and the data which `Configuration Server` reads from `Configuration Data Git Repository`. Both `bootstrap.yml` and `application.yml` files are located in the `resources` folder of this source code.
 
 We **recommend** overriding the configuration as needed in the `Configuration Data Git Repository`, which is used by the `Configuration Server`.
 
@@ -104,7 +104,7 @@ Java has a default CA Certificates Store that allows it to trust well-known cert
 
 *NOTE: The `cacerts` references given in the volume mapping above are files, not directories.*
 
-[//]: # (## API Documentation)
+[//]: # (## Project Documentation)
 [//]: # (## Contribute)
 
 ## Contact
@@ -113,6 +113,6 @@ If you have any questions, comments, or concerns please see [Consent2Share](http
 
 ## Report Issues
 
-Please use [GitHub Issues](https://github.com/bhits/pls-api/issues) page to report issues.
+Please use [GitHub Issues](https://github.com/bhits/pls/issues) page to report issues.
 
 [//]: # (License)

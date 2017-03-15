@@ -5,7 +5,7 @@
 
     <groupId>gov.samhsa.c2s</groupId>
     <artifactId>pls</artifactId>
-    <version>2.1.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>pls</name>
@@ -32,13 +32,8 @@
         </license>
     </licenses>
 
-    <ciManagement>
-        <system>CI</system>
-        <url>http://BhitsBuild03/</url>
-    </ciManagement>
-
     <scm>
-        <url>https://github.com/bhits/pls-api</url>
+        <url>https://github.com/bhits/pls</url>
         <connection>scm:git:${project.scm.url}.git</connection>
         <developerConnection>scm:git:${project.scm.url}.git</developerConnection>
     </scm>
@@ -58,7 +53,7 @@
         <flexjson.version>3.3</flexjson.version>
         <commons.lang3.version>3.5</commons.lang3.version>
         <docker.maven.version>0.4.3</docker.maven.version>
-     </properties>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -169,5 +164,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
