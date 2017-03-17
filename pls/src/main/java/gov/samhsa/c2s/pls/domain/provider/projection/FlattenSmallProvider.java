@@ -5,7 +5,7 @@ import gov.samhsa.c2s.pls.domain.provider.Provider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
 
-@Projection(name="FlattenSmallProvider", types={Provider.class})
+@Projection(name = "FlattenSmallProvider", types = {Provider.class})
 public interface FlattenSmallProvider {
     String getNpi();
 
@@ -16,9 +16,14 @@ public interface FlattenSmallProvider {
     String getEntityTypeDisplayName();
 
     String getLastName();
+
     String getFirstName();
+
     String getMiddleName();
+
     String getOrganizationName();
+
+    String getGenderCode();
 
     @JsonProperty("firstLinePracticeLocationAddress")
     String getFirstLineBusinessPracticeLocationAddress();
@@ -41,9 +46,11 @@ public interface FlattenSmallProvider {
     @JsonProperty("practiceLocationAddressTelephoneNumber")
     String getBusinessPracticeLocationAddressTelephoneNumber();
 
+    @JsonProperty("practiceLocationAddressFaxNumber")
     String getBusinessPracticeLocationAddressFaxNumber();
-    String getEnumerationDate();
-    String getLastUpdateDate();
 
+    String getEnumerationDate();
+
+    String getLastUpdateDate();
 }
 
