@@ -1,12 +1,12 @@
 
 # Short Description
-The Provider Lookup Service (PLS) is responsible for storing provider information.
+The Provider Lookup Service (PLS) is responsible for storing and finding provider information.
 
 # Full Description
 
 # Supported Source Code Tags and Current `Dockerfile` Link
 
-[`2.1.0 (latest)`](https://github.com/bhits/pls/releases/tag/2.1.0), [`1.11.0`](https://github.com/bhits/pls/releases/tag/1.11.0)
+[`3.0.0 (latest)`](https://github.com/bhits/pls/releases/tag/3.0.0)
 
 [`Current Dockerfile`](https://github.com/bhits/pls/blob/master/pls/src/main/docker/Dockerfile)
 
@@ -66,7 +66,7 @@ This environment variable is used to setup an application argument. The default 
 
 # Supported Docker Versions
 
-This image is officially supported on Docker version 1.12.1.
+This image is officially supported on Docker version 1.13.0.
 
 Support for older versions (down to 1.6) is provided on a best-effort basis.
 
