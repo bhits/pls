@@ -1,0 +1,1 @@
+create table state_code (id bigint not null auto_increment, code varchar(255) not null, code_system varchar(255), code_system_name varchar(255) not null, code_systemoid varchar(255), description varchar(255), display_name varchar(255) not null, primary key (id)) ENGINE=InnoDB;

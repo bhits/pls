@@ -2,11 +2,14 @@ package gov.samhsa.c2s.pls.domain.provider;
 
 import gov.samhsa.c2s.pls.domain.reference.EntityType;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
-import java.util.Date;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Data
 @Entity
@@ -19,20 +22,16 @@ public class Provider {
     @ManyToOne(cascade = CascadeType.ALL)
     private EntityType entityType;
 
-    @Size(min = 2, max = 30)
     @Pattern(regexp = "^[a-zA-ZÀ-ÿ]+[-]?[a-zA-ZÀ-ÿ']*[a-zA-ZÀ-ÿ]$")
     private String lastName;
 
-    @Size(min = 2, max = 30)
     @Pattern(regexp = "^[a-zA-ZÀ-ÿ]+[-]?[a-zA-ZÀ-ÿ']*[a-zA-ZÀ-ÿ]$")
     private String firstName;
 
 
-    @Size(min = 2, max = 30)
     @Pattern(regexp = "^[a-zA-ZÀ-ÿ]+[-]?[a-zA-ZÀ-ÿ']*[a-zA-ZÀ-ÿ]$")
     private String middleName;
 
-    @Size(min = 2, max = 255)
     @Pattern(regexp = "^[a-zA-ZÀ-ÿ]+[-]?[a-zA-ZÀ-ÿ']*[a-zA-ZÀ-ÿ]$")
     private String organizationName;
 
