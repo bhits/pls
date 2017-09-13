@@ -6,7 +6,7 @@ The Provider Lookup Service (PLS) is responsible for storing and finding provide
 
 # Supported Source Code Tags and Current `Dockerfile` Link
 
-[`3.2.0 (latest)`](https://github.com/bhits-dev/pls/releases/tag/3.2.0), [`3.1.0`](https://github.com/bhits-dev/pls/releases/tag/3.1.0), [`3.0.0`](https://github.com/bhits-dev/pls/releases/tag/3.0.0)
+[`3.3.0 (latest)`](https://github.com/bhits-dev/pls/releases/tag/3.3.0), [`3.2.0`](https://github.com/bhits-dev/pls/releases/tag/3.2.0), [`3.1.0`](https://github.com/bhits-dev/pls/releases/tag/3.1.0), [`3.0.0`](https://github.com/bhits-dev/pls/releases/tag/3.0.0)
 
 [`Current Dockerfile`](../pls/src/main/docker/Dockerfile)
 
